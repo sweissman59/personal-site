@@ -1,0 +1,61 @@
+.thumbnail-container {
+	transition: all .3s linear;
+	max-width: 15vw;
+	height: 15vw;
+	padding: 1vw;
+	float: left;
+	font-size: 0;
+}
+
+.thumbnail-container:hover,
+.thumbnail-container:active,
+.thumbnail-container:focus {
+	padding-top: 0vw;
+}
+
+.thumbnail-image {
+	height: 100%;
+	position: relative;
+	z-index: 0;
+	transition: all .3s linear;
+	clip-path: circle(7.5vw);
+}
+
+.thumbnail-image.loading {
+	opacity: 0;
+}
+
+.thumbnail-image.faded {
+	opacity: .3;
+}
+
+.thumbnail-container:hover .thumbnail-image,
+.thumbnail-container:active .thumbnail-image,
+.thumbnail-container:focus .thumbnail-image {
+	transition: all .3s linear;
+	height: 130%;
+	clip-path: circle(100%);
+	z-index: 20;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.thumbnail-shadow {
+	position: relative;
+	z-index: -1;
+	top: -15vw;
+	height: 15vw;
+	width: 15vw;
+	background: rgba(0, 0, 0, .5);
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.thumbnail-container:hover .thumbnail-shadow,
+.thumbnail-container:active .thumbnail-shadow,
+.thumbnail-container:focus .thumbnail-shadow {
+	visibility: hidden;
+}
+
+.thumbnail-image.faded + .thumbnail-shadow {
+	opacity: .3;
+}

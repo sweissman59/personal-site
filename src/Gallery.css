@@ -1,0 +1,12 @@
+#gallery {
+	position: relative;
+	width: 68vw;
+	height: 100%;
+	left: 10vw;
+	padding: 5vw;
+}
+
+.gallery-row {
+	width: 100%;
+	height: 17vw;
+}
