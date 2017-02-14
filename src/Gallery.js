@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import $ from 'jquery'
 import './Gallery.css'
 import Thumbnail from './Thumbnail'
 
@@ -40,6 +41,7 @@ class Gallery extends Component {
       console.log('load callback: ' + loadedCount);
       if (loadedCount >= urls.length) {
         self.setState({loaded: true});
+        $("#loading-blocker").css('pointer-events', 'auto');
       }
     }
 
@@ -68,6 +70,7 @@ class Gallery extends Component {
 
     return (
       <div id="gallery">
+        <div id="loading-blocker">
         <div className="gallery-row">
           { thumbsList.slice(0,4) }
         </div>
@@ -79,6 +82,7 @@ class Gallery extends Component {
         </div>
         <div className="gallery-row">
           { thumbsList.slice(12,16) }
+        </div>
         </div>
 
       </div>
