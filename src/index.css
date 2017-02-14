@@ -7,9 +7,9 @@ body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;
-  background: linear-gradient(rgba(188,201,211,0.85), rgba(230,235,239,0.95)),url('https://www.goodfreephotos.com/albums/textures/smooth-shirt-outside-texture.jpg');
+  background: linear-gradient(rgba(188,201,211,0.93), rgba(230,235,239,0.95)),url('./denim-165303_1280.jpg');
   background-size: cover, contain;
-  background-repeat: no-repeat, auto;
+  background-repeat: no-repeat, repeat;
   background-attachment: fixed;
 }
 
