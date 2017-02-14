@@ -64,7 +64,7 @@ class Thumbnail extends Component {
         clearInterval(resizeInterval);
         clearTimeout(resizeTimeout);
         resizeInterval = setInterval(function(){
-            self.width = img.width();
+            self.width = img.width() / (self.state.hovered ? 1.3 : 1);
             self.setLeft(img, container);
         }, 10);
 
