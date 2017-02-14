@@ -38,24 +38,3 @@
 	z-index: 20;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
-
-.thumbnail-shadow {
-	position: relative;
-	z-index: -1;
-	top: -15vw;
-	height: 15vw;
-	width: 15vw;
-	background: rgba(0, 0, 0, .5);
-	border-radius: 50%;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-}
-
-.thumbnail-container:hover .thumbnail-shadow,
-.thumbnail-container:active .thumbnail-shadow,
-.thumbnail-container:focus .thumbnail-shadow {
-	visibility: hidden;
-}
-
-.thumbnail-image.faded + .thumbnail-shadow {
-	opacity: .3;
-}
