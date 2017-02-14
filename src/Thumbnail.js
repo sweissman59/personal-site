@@ -36,7 +36,7 @@ class Thumbnail extends Component {
 
   componentDidMount() {
     var self = this;
-    let img =  $('#' + self.props.id + '-image');
+    let img = $('#' + self.props.id + '-image');
     let container = $('#' + self.props.id + '-container');
     let resizeInterval = undefined;
     let resizeTimeout = undefined;

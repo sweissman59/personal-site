@@ -27,8 +27,7 @@
 }
 
 .thumbnail-image.faded {
-	/*opacity: .3;*/
-	filter: brightness(80%);
+	opacity: .7;
 }
 
 .thumbnail-container:hover .thumbnail-image,

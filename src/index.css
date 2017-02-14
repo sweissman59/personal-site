@@ -1,3 +1,4 @@
+/* Background pattern from Subtle Patterns https://www.toptal.com/designers/subtlepatterns/ */
 html {
 	height: 100%;
 }
@@ -8,11 +9,10 @@ body {
   height: 100%;
   font-family: sans-serif;
   background-image:
-      linear-gradient(rgba(188,201,211,0.7),rgba(230,235,239,0.95)),
-      radial-gradient(#beccd6 15%, transparent 16%),
-      radial-gradient(circle at 52% 52%, #939ea5 16%, transparent 17%);
-  background-size: cover, 60px 60px, 60px 60px;
-  background-repeat: no-repeat, repeat, repeat;
+      linear-gradient(rgba(188,201,211,0.5),rgba(230,235,239,0.7)),
+      url('./random_grey_variations.png');
+  background-size: cover, auto;
+  background-repeat: no-repeat, repeat;
   background-attachment: fixed;
 }
 
