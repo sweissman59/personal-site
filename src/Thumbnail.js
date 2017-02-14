@@ -30,7 +30,6 @@ class Thumbnail extends Component {
             + (this.props.doneLoading ? "" : " loading")
             }>
           </img>
-          <div className="thumbnail-shadow"></div>
       </div>
     )
   }
