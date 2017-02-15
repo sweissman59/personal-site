@@ -22,14 +22,14 @@ class Thumbnail extends Component {
   render() {
     return (
       <div id={this.props.id + "-container"} className="thumbnail-container">
-        <img
+        <div
           id={this.props.id + "-image"}
           className=
             {"thumbnail-image"
             + (this.props.dimIfNotHovered && !this.state.hovered ? " faded" : "")
             + (this.props.doneLoading ? "" : " loading")
             }>
-          </img>
+          </div>
       </div>
     )
   }
@@ -41,11 +41,17 @@ class Thumbnail extends Component {
     let resizeInterval = undefined;
     let resizeTimeout = undefined;
 
-    img.on('load', function(){
+    var image = $("<img>", {class: "temp-image", id: "temp-" + self.props.id, src: self.props.source});
+
+    image.on('load', function(){
+        img.css('background-image', 'url(' + self.props.source + ')');
+        image.remove();
         let width = self.width = img.width();
         self.setLeft(img, container);
         self.props.loadCB();
-    }).attr('src', self.props.source);
+    });
+
+    img.append(image);
 
     container.hover(
         function() {

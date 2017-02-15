@@ -14,12 +14,15 @@
 }
 
 .thumbnail-image {
-	height: 100%;
+	height: 15vw;
+	width: 15vw;
 	position: relative;
 	z-index: 0;
 	transition: all .3s linear;
-	clip-path: circle(7.5vw);
-	transform: translate3d(0,0,0);
+	/*clip-path: circle(7.5vw);*/
+	/*transform: translate3d(0,0,0);*/
+	background-size: cover;
+	border-radius: 50%;
 }
 
 .thumbnail-image.loading {
@@ -35,7 +38,12 @@
 .thumbnail-container:focus .thumbnail-image {
 	transition: all .3s linear;
 	height: 130%;
-	clip-path: circle(100%);
+	/*clip-path: circle(100%);*/
+	border-radius: 0;
 	z-index: 20;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.temp-image {
+	visibility: hidden;
 }
