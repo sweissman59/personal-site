@@ -8,15 +8,19 @@ class Thumbnail extends Component {
     this.state = {
         hovered: false
     };
-    this.width = 0;
+    this.ratio = 0;
   }
 
-  setLeft(img, container) {
+  setPosition(img, container) {
     var self = this;
-    let width = self.width;
     let containerWidth = container.width();
+    let width = self.state.hovered ? (self.ratio * containerWidth * 1.3) : containerWidth;
     let newLeft = -((width * (self.state.hovered ? 1.3 : 1) - containerWidth) / 2);
-    img.css('left', newLeft + 'px');
+
+    img.css({
+      left: newLeft + 'px',
+      width: width + 'px'
+    });
   }
 
   render() {
@@ -45,9 +49,8 @@ class Thumbnail extends Component {
 
     image.on('load', function(){
         img.css('background-image', 'url(' + self.props.source + ')');
+        self.ratio = image.width() / image.height();
         image.remove();
-        let width = self.width = img.width();
-        self.setLeft(img, container);
         self.props.loadCB();
     });
 
@@ -56,12 +59,12 @@ class Thumbnail extends Component {
     container.hover(
         function() {
             self.setState({hovered: true});
-            self.setLeft(img, container);
+            self.setPosition(img, container);
             self.props.hoverCB(true);
         },
         function() {
             self.setState({hovered: false});
-            self.setLeft(img, container);
+            self.setPosition(img, container);
             self.props.hoverCB(false);
         }
     );
@@ -70,8 +73,8 @@ class Thumbnail extends Component {
         clearInterval(resizeInterval);
         clearTimeout(resizeTimeout);
         resizeInterval = setInterval(function(){
-            self.width = img.width() / (self.state.hovered ? 1.3 : 1);
-            self.setLeft(img, container);
+            // self.width = img.width() / (self.state.hovered ? 1.3 : 1);
+            self.setPosition(img, container);
         }, 10);
 
         resizeTimeout = setTimeout(function(){
