@@ -1,14 +1,21 @@
 #gallery {
 	position: relative;
-	width: 64vw;
-	height: 100%;
-	left: 13vw;
-	padding: 5vw;
+	width: 76vw;
+	height: 76vw;
+	left: 9vw;
+	padding: 3vw;
+	box-sizing: content-box;
 }
 
 .gallery-row {
 	width: 100%;
-	height: 16vw;
+	height: 19vw;
+	box-sizing: content-box;
+}
+
+.gallery-row.bottom {
+	padding-bottom: 3vw;
+	box-sizing: content-box;
 }
 
 #loading-blocker {
@@ -16,4 +23,5 @@
 	width: 100%;
 	pointer-events: none;
 	z-index: 10;
+	box-sizing: content-box;
 }

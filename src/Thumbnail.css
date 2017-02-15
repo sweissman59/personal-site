@@ -1,15 +1,16 @@
 .thumbnail-container {
 	transition: all .3s linear;
-	max-width: 15vw;
-	height: 15vw;
+	max-width: 18vw;
+	height: 18vw;
 	padding: .5vw;
 	float: left;
 	font-size: 0;
+	box-sizing: content-box;
 }
 
 .thumbnail-image {
-	height: 15vw;
-	width: 15vw;
+	height: 18vw;
+	width: 18vw;
 	position: relative;
 	z-index: 0;
 	transition: all .3s linear;

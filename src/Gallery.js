@@ -80,7 +80,7 @@ class Gallery extends Component {
         <div className="gallery-row">
           { thumbsList.slice(8,12) }
         </div>
-        <div className="gallery-row">
+        <div className="gallery-row bottom">
           { thumbsList.slice(12,16) }
         </div>
         </div>

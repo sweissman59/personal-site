@@ -81,11 +81,11 @@ class Thumbnail extends Component {
         clearTimeout(resizeTimeout);
         resizeInterval = setInterval(function(){
             self.setPosition(img, container);
-        }, 10);
+        }, 20);
 
         resizeTimeout = setTimeout(function(){
             clearInterval(resizeInterval);
-        }, 500);
+        }, 700);
     });
   }
 }
