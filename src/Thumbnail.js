@@ -15,11 +15,13 @@ class Thumbnail extends Component {
     var self = this;
     let containerWidth = container.width();
     let width = self.state.hovered ? (self.ratio * containerWidth * 1.3) : containerWidth;
-    let newLeft = -((width * (self.state.hovered ? 1.3 : 1) - containerWidth) / 2);
+    let newLeft = -((width - containerWidth) / 2);
+    let newTop = (self.state.hovered ? -((containerWidth * 1.3 - containerWidth) / 2) : 0)
 
     img.css({
       left: newLeft + 'px',
-      width: width + 'px'
+      width: width + 'px',
+      top: newTop + 'px'
     });
   }
 
@@ -48,7 +50,11 @@ class Thumbnail extends Component {
     var image = $("<img>", {class: "temp-image", id: "temp-" + self.props.id, src: self.props.source});
 
     image.on('load', function(){
-        img.css('background-image', 'url(' + self.props.source + ')');
+        img.css({
+          'background-image': 'url(' + self.props.source + ')',
+          left: '0px',
+          top: '0px'
+        });
         self.ratio = image.width() / image.height();
         image.remove();
         self.props.loadCB();
