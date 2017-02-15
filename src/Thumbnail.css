@@ -2,7 +2,7 @@
 	transition: all .3s linear;
 	max-width: 15vw;
 	height: 15vw;
-	padding: 1vw;
+	padding: .5vw;
 	float: left;
 	font-size: 0;
 }
@@ -18,7 +18,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	border-radius: 50%;
+	border-radius: 15%;
 }
 
 .thumbnail-image.loading {
