@@ -22,6 +22,7 @@
 	/*clip-path: circle(7.5vw);*/
 	/*transform: translate3d(0,0,0);*/
 	background-size: cover;
+	background-position: center center;
 	border-radius: 50%;
 }
 
