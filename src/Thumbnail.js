@@ -14,7 +14,8 @@ class Thumbnail extends Component {
   setPosition(img, container) {
     var self = this;
     let containerWidth = container.width();
-    let width = self.state.hovered ? (self.ratio * containerWidth * 1.3) : containerWidth;
+    let containerHeight = container.height();
+    let width = self.state.hovered ? (self.ratio * containerWidth * 1.3) : containerHeight;
     let newLeft = -((width - containerWidth) / 2);
     let newTop = (self.state.hovered ? -((containerWidth * 1.3 - containerWidth) / 2) : 0)
 
@@ -79,7 +80,6 @@ class Thumbnail extends Component {
         clearInterval(resizeInterval);
         clearTimeout(resizeTimeout);
         resizeInterval = setInterval(function(){
-            // self.width = img.width() / (self.state.hovered ? 1.3 : 1);
             self.setPosition(img, container);
         }, 10);
 
