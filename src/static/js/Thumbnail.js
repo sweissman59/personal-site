@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
-import './Thumbnail.css'
+import '../css/Thumbnail.css'
 
 class Thumbnail extends Component {
   constructor(props) {

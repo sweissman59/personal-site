@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Resume extends Component {
 	render () {
-		return (<div>This is the Resume page</div>);
+		return (<div>Be impressive here</div>);
 	}
 }
 

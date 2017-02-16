@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import Gallery from './Gallery.js'
-import About from './About.js'
-import Resume from './Resume.js'
+import './static/css/App.css'
+import Gallery from './static/js/Gallery.js'
+import About from './static/js/About.js'
+import Resume from './static/js/Resume.js'
 import { Button, ButtonGroup } from 'react-bootstrap'
 
 class App extends Component {
@@ -31,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Sam Weissman-Hohler</h2>
+          <h1>Sam Weissman-Hohler</h1>
           <ButtonGroup id='navButtons'>
           	<Button className='navButton' active={this.state.page === 'gallery'} onClick={() => this.navClick('gallery')}>Gallery</Button>
           	<Button className='navButton' active={this.state.page === 'about'} onClick={() => this.navClick('about')}>About</Button>

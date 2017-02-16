@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
-import './Gallery.css'
+import '../css/Gallery.css'
 import Thumbnail from './Thumbnail'
 
 class Gallery extends Component {
