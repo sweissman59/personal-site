@@ -39,21 +39,3 @@
 .App-intro {
   font-size: large;
 }
-
-#navButtons .navButton {
-  outline: none;
-  font-family: raleway;
-}
-
-#navButtons .navButton.active {
-  background-color: #d7dbe2;
-  border-color: #abb0ba;
-}
-
-#social-dropdown + .dropdown-menu {
-  min-width: 0px;
-}
-
-#social-dropdown + ul a {
-  padding: 3px 6px;
-}
