@@ -8,53 +8,53 @@ import NavBar from './static/js/NavBar.js'
 import $ from 'jquery'
 
 class App extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      page: 'gallery',
-      width: 0
-    };
-  }
+	constructor (props) {
+		super(props);
+		this.state = {
+			page: 'gallery',
+			width: 0
+		};
+	}
 
-  updateWidth () {
-    this.setState({width: $(window).width()});
-  }
+	updateWidth () {
+		this.setState({width: $(window).width()});
+	}
 
-  navClick (page) {
-    this.setState({page: page});
-  }
+	navClick (page) {
+		this.setState({page: page});
+	}
 
-  render () {
-    let display = null;
-    if (this.state.page === 'gallery') {
-      display = <Gallery />;
-    } else if (this.state.page === 'about') {
-      display = <About />;
-    } else if (this.state.page === 'resume') {
-      display = <Resume />;
-    }
+	render () {
+		let display = null;
+		if (this.state.page === 'gallery') {
+			display = <Gallery />;
+		} else if (this.state.page === 'about') {
+			display = <About />;
+		} else if (this.state.page === 'resume') {
+			display = <Resume />;
+		}
 
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h1>Sam Weissman-Hohler</h1>
-          <NavBar page={this.state.page} navClick={this.navClick.bind(this)}/>
-        </div>
-        {display}
-      </div>
-    )
-  }
+		return (
+			<div className="App">
+				<div className="App-header">
+					<h1>Sam Weissman-Hohler</h1>
+					<NavBar page={this.state.page} navClick={this.navClick.bind(this)}/>
+				</div>
+				{display}
+			</div>
+		)
+	}
 
-  componentWillMount () {
-    this.updateWidth();
-  }
+	componentWillMount () {
+		this.updateWidth();
+	}
 
-  componentDidMount () {
-    var self = this;
-    $(window).resize(function () {
-      self.updateWidth();
-    });
-  }
+	componentDidMount () {
+		var self = this;
+		$(window).resize(function () {
+			self.updateWidth();
+		});
+	}
 }
 
 export default App
