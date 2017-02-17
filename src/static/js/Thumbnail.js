@@ -31,11 +31,10 @@ class Thumbnail extends Component {
       <div id={this.props.id + "-container"} className="thumbnail-container">
         <div
           id={this.props.id + "-image"}
-          className=
-            {"thumbnail-image"
+          className={
+            "thumbnail-image"
             + (this.props.dimIfNotHovered && !this.state.hovered ? " faded" : "")
-            + (this.props.doneLoading ? "" : " loading")
-            }>
+            + (this.props.doneLoading ? "" : " loading")}>
           </div>
       </div>
     )
@@ -45,8 +44,7 @@ class Thumbnail extends Component {
     var self = this;
     let img = $('#' + self.props.id + '-image');
     let container = $('#' + self.props.id + '-container');
-    let resizeInterval = undefined;
-    let resizeTimeout = undefined;
+    let resizeInterval, resizeTimeout;
 
     var image = $("<img>", {class: "temp-image", id: "temp-" + self.props.id, src: self.props.source});
 

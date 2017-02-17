@@ -38,7 +38,6 @@ class Gallery extends Component {
 
     var loadCallback = function () {
       loadedCount++;
-      console.log('load callback: ' + loadedCount);
       if (loadedCount >= urls.length) {
         self.setState({loaded: true});
         $("#loading-blocker").css('pointer-events', 'auto');

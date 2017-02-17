@@ -4,10 +4,6 @@ import $ from 'jquery'
 import '../css/NavBar.css'
 
 class NavBar extends Component {
-	constructor (props) {
-		super(props);
-	}
-
 	render () {
 		let socialButtons = [
 			<Button key="github-button" className="btn-social-icon btn-github" href="https://github.com/sweissman59" aria-label="Github"><span className="fa fa-github"></span></Button>,
@@ -17,7 +13,7 @@ class NavBar extends Component {
 		];
 		if ($(window).width() < 410) {
 			socialButtons = (
-				<DropdownButton id="social-dropdown" className="fa fa-bars" aria-label="Social Media">
+				<DropdownButton id="social-dropdown" className="fa fa-bars" aria-label="Social Media" title="">
 					{ socialButtons.map(function(button, index) {
 						let href = button.props.href;
 						button = React.cloneElement(button, {href: null});
@@ -27,14 +23,12 @@ class NavBar extends Component {
 			)
 		}
 
-		return (
-		<ButtonGroup id='navButtons'>
+		return (<ButtonGroup id='navButtons'>
 			<Button className='navButton' active={this.props.page === 'gallery'} onClick={() => this.props.navClick('gallery')}>Gallery</Button>
 			<Button className='navButton' active={this.props.page === 'about'} onClick={() => this.props.navClick('about')}>About</Button>
 			<Button className='navButton' active={this.props.page === 'resume'} onClick={() => this.props.navClick('resume')}>Resume</Button>
 			{ socialButtons }
-		</ButtonGroup>
-		)
+		</ButtonGroup>)
 	}
 }
 
