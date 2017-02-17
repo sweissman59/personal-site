@@ -49,3 +49,11 @@
   background-color: #d7dbe2;
   border-color: #abb0ba;
 }
+
+#social-dropdown + .dropdown-menu {
+  min-width: 0px;
+}
+
+#social-dropdown + ul a {
+  padding: 3px 6px;
+}
