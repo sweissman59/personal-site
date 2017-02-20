@@ -1,0 +1,15 @@
+.resume-container {
+	position: relative;
+	width: 86vw;
+	height: 100%;
+	left: 7vw;
+}
+
+#resume-pdf{
+	width: 80vw;
+	height: 100%;
+}
+
+#resume-png {
+	width: 80vw;
+}
