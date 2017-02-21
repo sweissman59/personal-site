@@ -2,7 +2,8 @@
 	position: relative;
 	width: 86vw;
 	min-height: 100%;
-	left: 7vw;
+	left: 6vw;
+	margin: 1vw;
 }
 
 #resume-pdf{

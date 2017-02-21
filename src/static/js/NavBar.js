@@ -11,7 +11,7 @@ class NavBar extends Component {
 			<Button key="twitter-button" className="btn-social-icon btn-twitter" href="https://twitter.com/tacroy47" aria-label="Twitter"><span className="fa fa-twitter"></span></Button>,
 			<Button key="flickr-button" className="btn-social-icon btn-flickr" href="https://www.flickr.com/photos/phixional_ninja/" aria-label="Flickr"><span className="fa fa-flickr"></span></Button>
 		];
-		if ($(window).width() < 410) {
+		if (this.props.windowWidth < 410) {
 			socialButtons = (
 				<DropdownButton id="social-dropdown" className="fa fa-bars" aria-label="Social Media" title="">
 					{ socialButtons.map(function(button, index) {

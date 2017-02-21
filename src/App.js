@@ -27,18 +27,18 @@ class App extends Component {
 	render () {
 		let display = null;
 		if (this.state.page === 'gallery') {
-			display = <Gallery />;
+			display = <Gallery windowWidth={this.state.width} />;
 		} else if (this.state.page === 'about') {
-			display = <About />;
+			display = <About windowWidth={this.state.width} />;
 		} else if (this.state.page === 'resume') {
-			display = <Resume />;
+			display = <Resume windowWidth={this.state.width} />;
 		}
 
 		return (
 			<div className="App">
 				<div className="App-header">
 					<h1>Sam Weissman-Hohler</h1>
-					<NavBar page={this.state.page} navClick={this.navClick.bind(this)}/>
+					<NavBar page={this.state.page} navClick={this.navClick.bind(this)} windowWidth={this.state.width} />
 				</div>
 				{display}
 			</div>

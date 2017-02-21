@@ -1,0 +1,24 @@
+.about-container {
+	transition: all .3s ease;
+	position: relative;
+	width: 70vw;
+	left: 14vw;
+	font-family: raleway;
+	font-size: large;
+	margin: 1vw;
+	text-align: left;
+	line-height: 160%;
+}
+
+.about-container.narrow {
+	width: 92vw;
+	left: 3vw;
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+.bottom {
+	margin-bottom: auto;
+}
