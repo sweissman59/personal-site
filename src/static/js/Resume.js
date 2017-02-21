@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Well } from 'react-bootstrap'
 import '../css/Resume.css'
-import PDF from 'react-pdf-js'
 
 class Resume extends Component {
 	render () {
